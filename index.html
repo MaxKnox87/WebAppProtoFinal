@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Find Me Feed Me</title>
+    <link rel="stylesheet" href="normalise.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+
+
+</head>
+<body>
+
+
+<div id = "logoleft"><a href ="index.html"><img   id="logosm" src = "images/logosm.png"/></a></div>
+<div id="map">
+
+</div>
+
+<section id="mainsection">
+
+    <article class="maincontent">
+        <img class ="logo" src="images/logo.png"/>
+        <h2>What would you like to eat?</h2>
+        <div id = "menu1">
+            <div id="foods">
+                <input type="radio" name="pizza" id="icon1" />
+                <label for="icon1"><img src="images/pizza.png" alt="italian" class="iconsm"/></label>
+                <input type="radio" name="fish" id="icon2" />
+                <label for="icon2"><img src="images/fish.png" alt="fish" class="iconsm"/></label>
+                <input type="radio" name="taco" id="icon3" />
+                <label for="icon3"><img src="images/taco.png" alt="mex" class="iconsm"/></label>
+                <input type="radio" name="chicken" id="icon4" />
+                <label for="icon4"><img src="images/chicken.png" alt="kfc" class="iconsm"/></label>
+            </div>
+        </div>
+
+        <h2>How will you get there?</h2>
+        <div id = "menu2">
+            <div id="travel">
+                <input type="radio" name="walk" id="travel1" />
+                <label for="icon1"><img src="images/walking.png" alt="walking" class="iconsm"/></label>
+                <input type="radio" name="car" id="travel2" />
+                <label for="icon2"><img src="images/car.png" alt="car" class="iconsm"/></label>
+                <input type="radio" name="bus" id="travel3" />
+                <label for="icon3"><img src="images/bus.png" alt="bus" class="iconsm"/></label>
+            </div>
+        </div>
+
+        <h2>How long do you have to travel?</h2>
+        <div id = "menu3">
+            <div id="time">
+                <input type="radio" name="30" id="time1" />
+                <label for="icon1" class="labelradio"><h4>30mins</h4></label>
+                <input type="radio" name="hour" id="time2" />
+                <label for="icon2" class="labelradio"><h4>1 hour</h4></label>
+                <input type="radio" name="hour plus" id="time3" />
+                <label for="icon3" class="labelradio"><h4>1 hour +</h4></label>
+            </div>
+        </div>
+
+        <h2>How much can you spend?</h2>
+        <div id = "menu4">
+            <div id="price">
+                <input type="radio" name="0-10" id="price1" />
+                <label for="icon1" class="labelradio"><h4>£0-£10</h4></label>
+                <input type="radio" name="10-20" id="price2" />
+                <label for="icon2" class="labelradio"><h4>£10-20£</h4></label>
+                <input type="radio" name="20-30" id="price3" />
+                <label for="icon3" class="labelradio"><h4>£20-30</h4></label>
+                <input type="radio" name="any" id="price4" />
+                <label for="icon4" class="labelradio"><h4>£ANY</h4></label>
+            </div>
+
+        </div>
+        <input id="go" class="go" type="submit" value="Feed Me!">
+    </article>
+
+</section>
+
+
+</body>
+<script>
+    google.maps.event.addDomListener(window, 'load', init);
+
+    function init() {
+        var mapOptions = {
+            zoom: 17,
+            center: new google.maps.LatLng(57.148510, -2.092747),
+            scrollwheel: true,
+            disableDefaultUI: true,
+
+            styles: [{stylers:[{hue:'#1F3A93'},{saturation:250}]},{featureType:'road',elementType:'geometry',stylers:[{lightness:50},{visibility:'simplified'}]},{featureType:'road',elementType:'labels',stylers:[{visibility:'off'}]}]
+        };
+
+        var mapElement = document.getElementById('map');
+
+        var map = new google.maps.Map(mapElement, mapOptions);
+
+        var marker = new google.maps.Marker({
+            position: map.getCenter(),
+            map: map,
+            title: 'Click to zoom'
+        });
+    }
+</script>
+
+<script>
+    $('#foods input:radio').addClass('input_hidden');
+    $('#foods label').click(function(){
+        $(this).addClass('selected').siblings().removeClass('selected');
+    });
+
+    $('#travel input:radio').addClass('input_hidden');
+    $('#travel label').click(function(){
+        $(this).addClass('selected').siblings().removeClass('selected');
+    });
+
+    $('#time input:radio').addClass('input_hidden');
+    $('#time label').click(function(){
+        $(this).addClass('selected').siblings().removeClass('selected');
+    });
+
+    $('#price input:radio').addClass('input_hidden');
+    $('#price label').click(function(){
+        $(this).addClass('selected').siblings().removeClass('selected');
+    });
+
+    $(document).ready(function(){
+        $("#go").click(function(){
+            $("#mainsection").hide();
+        });
+    });
+
+    $(document).ready(function(){
+        $("#go").click(function(){
+            $("#logoleft").show();
+        });
+    });
+
+    
+</script>
+
+</html>

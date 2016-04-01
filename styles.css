@@ -1,0 +1,174 @@
+/*********************** FONTS ***********************/
+
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+
+h1 {
+    font-size: 2.5em;
+    font-weight: 400;
+
+}
+h2{
+    font-weight: 400;
+    margin-top: 5px;
+    margin-bottom:5px;
+
+}
+
+h4{
+    font-weight: 400;
+}
+html {
+    font-family: "Raleway";
+    font-weight: 400;
+    background-color: aquamarine;
+    margin: 0 0 0 0;
+}
+
+/*********************** MAP BACKGROUND ***********************/
+
+#map {
+    height: 100%;
+    width: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+
+/*********************** MAIN CONTENT HOLDER ***********************/
+
+#mainsection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:100vh;
+
+}
+
+.maincontent {
+    background-color:#D2D7D3;
+    min-height:400px;
+    min-width:200px;
+    height:70vh;
+    width:500px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0.9;
+    z-index: 1;
+
+}
+
+/*********************** IMAGES AND LOGOS ***********************/
+
+.logo {
+    min-width:200px;
+    min-height:140px;
+}
+
+#logoleft{
+
+    z-index: 10;
+    position:fixed;
+    height:64px;
+    width:128px;
+    display:none;
+
+}
+
+#logosm{
+    height:64px;
+    width:128px;
+}
+
+#menu1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+#menu2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.icon {
+    max-height: 64px;
+    max-width: 64px;
+    margin-left: 10px;
+    margin-right:10px;
+}
+
+.iconsm {
+    max-height: 64px;
+    max-width: 64px;
+    margin-left: 10px;
+    margin-right:10px;
+}
+
+.input_hidden {
+    position: absolute;
+    left: -9999px;
+}
+
+.selected {
+    background-color: #E74C3C;
+
+}
+
+#foods label {
+    display: inline-block;
+    cursor: pointer;
+}
+
+#foods label img {
+    padding: 3px;
+}
+
+#travel label {
+    display: inline-block;
+    cursor: pointer;
+}
+
+#travel label img {
+    padding: 3px;
+}
+
+#time label {
+    display: inline-block;
+    cursor: pointer;
+}
+
+#time label img {
+    padding: 3px;
+}
+
+#price label {
+    display: inline-block;
+    cursor: pointer;
+}
+
+#price label img {
+    padding: 3px;
+}
+
+.labelradio {
+    margin-left:10px;
+    margin-right:10px;
+
+}
+
+/*********************** BUTTONS ***********************/
+
+.go {
+    min-width:200px;
+    min-height:60px;
+    border-style: none;
+    background-color: #FF0000;
+    margin-top: 10px;
+    font-family: "Raleway";
+    font-size: 2em;
+    cursor:pointer;
+    margin-bottom:20px;
+}
+.go:hover {
+    background-color: darkgreen;
+}

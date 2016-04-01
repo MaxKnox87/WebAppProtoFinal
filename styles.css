@@ -90,13 +90,6 @@ html {
     justify-content: space-between;
 }
 
-.icon {
-    max-height: 64px;
-    max-width: 64px;
-    margin-left: 10px;
-    margin-right:10px;
-}
-
 .iconsm {
     max-height: 64px;
     max-width: 64px;
@@ -171,4 +164,45 @@ html {
 }
 .go:hover {
     background-color: darkgreen;
+}
+
+/*********************** MEDIA QUERIES ***********************/
+@media screen and (max-width: 1366px){
+
+h1 {
+    font-size: 1.5em;
+}
+
+h2 {
+    font-size:1em;
+}
+
+h4 {
+    font-size: 0.7em;
+}
+
+.iconsm {
+    max-height: 32px;
+    max-width: 32px;
+    margin-left: 5px;
+    margin-right:5px;
+}
+
+.go {
+    min-width:100px;
+    min-height:30px;
+    border-style: none;
+    background-color: #FF0000;
+    margin-top: 10px;
+    font-family: "Raleway";
+    font-size: 1em;
+    cursor:pointer;
+    margin-bottom:0px;
+}
+
+.logo {
+    max-width:100px;
+    max-height:20px;
+}
+
 }
